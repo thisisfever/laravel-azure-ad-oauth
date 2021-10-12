@@ -2,7 +2,7 @@
 
 ## Installation
 
-`composer require metrogistics/laravel-azure-ad-oauth`
+`composer require hakkahio/laravel-azure-ad-oauth-laravel-8`
 
 If you are using Laravel 5.5 or greater, the service provider will be detected and installed by Laravel automatically. Otherwise you will need to add the service provider and the facade (optional) to the `config/app.php` file:
 
