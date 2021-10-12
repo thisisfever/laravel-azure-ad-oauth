@@ -1,6 +1,6 @@
 <?php
 
-namespace Metrogistics\AzureSocialite;
+namespace hakkahio\AzureSocialite;
 
 use GuzzleHttp\Client;
 use Laravel\Socialite\Facades\Socialite;

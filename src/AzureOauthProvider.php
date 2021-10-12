@@ -1,6 +1,6 @@
 <?php
 
-namespace Metrogistics\AzureSocialite;
+namespace hakkahio\AzureSocialite;
 
 use Illuminate\Support\Arr;
 use Laravel\Socialite\Two\User;

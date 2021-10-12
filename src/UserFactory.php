@@ -1,6 +1,6 @@
 <?php
 
-namespace Metrogistics\AzureSocialite;
+namespace hakkahio\AzureSocialite;
 
 class UserFactory
 {

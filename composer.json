@@ -8,8 +8,7 @@
     },
     "authors": [
         {
-            "name": "Patrick Stephan",
-            "email": "patrick.stephan@metrogistics.com"
+            "name": "Patrick Stephan"
         }
     ],
     "autoload": {

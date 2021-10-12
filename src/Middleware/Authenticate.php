@@ -1,6 +1,6 @@
 <?php
 
-namespace Metrogistics\AzureSocialite\Middleware;
+namespace hakkahio\AzureSocialite\Middleware;
 
 use Illuminate\Contracts\Auth\Guard;
 use \Illuminate\Contracts\Auth\Authenticatable;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Metrogistics\AzureSocialite;
+namespace hakkahio\AzureSocialite;
 
 use Illuminate\Routing\Controller;
 use Laravel\Socialite\Facades\Socialite;
