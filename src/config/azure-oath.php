@@ -10,10 +10,6 @@ return [
         // There should be no reason to override this.
         'login' => 'login/microsoft',
 
-        // The organisation used for the SSO URL. 
-        // This is set to 'common' by default. 
-        'organisation' => 'common',
-
         // The app route that SSO will redirect to.
         // There should be no reason to override this.
         'callback' => 'login/microsoft/callback',
@@ -23,6 +19,10 @@ return [
         'client_secret' => env('AZURE_AD_CLIENT_SECRET', ''),
         'redirect' => Request::root().'/login/microsoft/callback'
     ],
+    
+    // The organisation used for the SSO URL. 
+    // This is set to 'common' by default. 
+    'organisation' => 'common',
 
     // The route to redirect the user to upon login.
     'redirect_on_login' => '/home',
