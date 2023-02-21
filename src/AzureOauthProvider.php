@@ -1,6 +1,6 @@
 <?php
 
-namespace hakkahio\AzureSocialite;
+namespace thisisfever\AzureSocialite;
 
 use Illuminate\Support\Arr;
 use Laravel\Socialite\Two\User;
@@ -15,12 +15,14 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
 
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://login.microsoftonline.com/common/oauth2/authorize', $state);
+        $org = config('azure-oath.organisation');
+        return $this->buildAuthUrlFromBase("https://login.microsoftonline.com/$org/oauth2/authorize", $state);
     }
 
     protected function getTokenUrl()
     {
-        return 'https://login.microsoftonline.com/common/oauth2/token';
+        $org = config('azure-oath.organisation');
+        return "https://login.microsoftonline.com/$org/oauth2/token";
     }
 
     protected function getTokenFields($code)

@@ -1,10 +1,10 @@
 <?php
 
-namespace hakkahio\AzureSocialite;
+namespace thisisfever\AzureSocialite;
 
 use Illuminate\Support\Facades\Auth;
 use SocialiteProviders\Manager\SocialiteWasCalled;
-use hakkahio\AzureSocialite\Middleware\Authenticate;
+use thisisfever\AzureSocialite\Middleware\Authenticate;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -35,14 +35,14 @@ class ServiceProvider extends BaseServiceProvider
 
         $this->app['Laravel\Socialite\Contracts\Factory']->extend('azure-oauth', function($app){
             return $app['Laravel\Socialite\Contracts\Factory']->buildProvider(
-                'hakkahio\AzureSocialite\AzureOauthProvider',
+                'thisisfever\AzureSocialite\AzureOauthProvider',
                 config('azure-oath.credentials')
             );
         });
 
         $this->app['router']->group(['middleware' => config('azure-oath.routes.middleware')], function($router){
-            $router->get(config('azure-oath.routes.login'), 'hakkahio\AzureSocialite\AuthController@redirectToOauthProvider');
-            $router->get(config('azure-oath.routes.callback'), 'hakkahio\AzureSocialite\AuthController@handleOauthResponse');
+            $router->get(config('azure-oath.routes.login'), 'thisisfever\AzureSocialite\AuthController@redirectToOauthProvider');
+            $router->get(config('azure-oath.routes.callback'), 'thisisfever\AzureSocialite\AuthController@handleOauthResponse');
         });
     }
 }

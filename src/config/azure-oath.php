@@ -10,6 +10,10 @@ return [
         // There should be no reason to override this.
         'login' => 'login/microsoft',
 
+        // The organisation used for the SSO URL. 
+        // This is set to 'common' by default. 
+        'organisation' => 'common',
+
         // The app route that SSO will redirect to.
         // There should be no reason to override this.
         'callback' => 'login/microsoft/callback',

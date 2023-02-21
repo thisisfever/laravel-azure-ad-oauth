@@ -2,15 +2,8 @@
 
 ## Installation
 
-`composer require hakkahio/laravel-azure-ad-oauth-laravel-8`
+`composer require thisisfever/laravel-azure-ad-oauth`
 
-If you are using Laravel 5.5 or greater, the service provider will be detected and installed by Laravel automatically. Otherwise you will need to add the service provider and the facade (optional) to the `config/app.php` file:
-
-```
-hakkahio\AzureSocialite\ServiceProvider::class,
-// ...
-'AzureUser' => hakkahio\AzureSocialite\AzureUserFacade::class,
-```
 
 Publish the config and override any defaults:
 
@@ -43,7 +36,7 @@ auth()->user();
 If you need to set additional user fields when the user model is created at login, you may provide a callback via the `UserFactory::userCallback()` method. A good place to do so would be in your AppServiceProvider's `boot` method:
 
 ```
-\hakkahio\AzureSocialite\UserFactory::userCallback(function($new_user){
+\thisisfever\AzureSocialite\UserFactory::userCallback(function($new_user){
 	$new_user->api_token = str_random(60);
 });
 ```
